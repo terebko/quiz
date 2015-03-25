@@ -1,2 +1,1 @@
 # quiz
-działa
