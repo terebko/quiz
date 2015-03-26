@@ -1,0 +1,9 @@
+1. Od strony administratora:
+	- Edytowanie/dodawanie/usuwanie pytañ i odpowiedzi;
+	- Sprawdzanie zrobionych quizów; //wyœwietla listê zrobionych egzaminów (nick, ocena), po wybraniu danego testu   	          pokazuje pytania i odpowiedzi
+	- Kasowanie, banowanie, zmiana has³a i nicku, kasowanie egzaminów wybranych uczniów; 
+2. Od strony u¿ytkownika:
+	- Logowanie/rejestracja; //zapisane has³a i nicki zaszyfrowane w pliku .dat, wymóg mocnego has³a ( <8 liter, 
+	conajmniej 1 cyfra/znak specjalny i du¿a litera
+	- Robienie quizów; // z pliku z pytaniami losuje 10 pytañ z której jest robiony egzamin, pod koniec pokazywana 			jest liczba punktów, procent, ocena. Zapis egzaminu do pliku .txt w folderze usera
+	- Przegl¹danie zrobionych egzaminów; //ocena + jakie pytania;
