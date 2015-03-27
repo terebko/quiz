@@ -1,0 +1,108 @@
+Czy 5 + 5 rowna sie:
+1
+2
+10
+11
+10
+Czy 1 + 1 rowna sie:
+1
+2
+10
+11
+2
+Czy 2 + 5 rowna sie:
+1
+2
+7
+8
+7
+Czy 15 + 4 rowna sie:
+1
+2
+10
+19
+19
+Czy 0 + 1 rowna sie:
+1
+2
+10
+11
+1
+Czy 2 + 3 rowna sie:
+1
+2
+5
+11
+5
+Czy 5 + 5 rowna sie:
+1
+2
+10
+11
+10
+Czy 1 + 1 rowna sie:
+1
+2
+10
+11
+2
+Czy 2 + 5 rowna sie:
+1
+2
+7
+8
+7
+Czy 15 + 4 rowna sie:
+1
+2
+10
+19
+19
+Czy 0 + 1 rowna sie:
+1
+2
+10
+11
+1
+Czy 2 + 3 rowna sie:
+1
+2
+5
+11
+5
+Czy 5 + 5 rowna sie:
+1
+2
+10
+11
+10
+Czy 1 + 1 rowna sie:
+1
+2
+10
+11
+2
+Czy 2 + 5 rowna sie:
+1
+2
+7
+8
+7
+Czy 15 + 4 rowna sie:
+1
+2
+10
+19
+19
+Czy 0 + 1 rowna sie:
+1
+2
+10
+11
+1
+Czy 2 + 3 rowna sie:
+1
+2
+5
+11
+5
