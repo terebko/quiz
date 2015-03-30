@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
+#include <fstream>
 /** It's preferred to store all questions in a vector or a list **/
 class Question {
 public:
@@ -14,8 +15,10 @@ public:
 
     static std::vector<Question> loadQuestionsFromFile(std::string fileName = "lista_pytan.txt");
 
-    Question(); // Open The Question creator and creates the question
+    Question(); // Opens The Question creator and creates the question
     Question(std::string mainSentence, std::vector<std::string> answers, int correctAnswer);
+    void setUserAnswer();
+    void setUserAnswer(int answer);
 
 
 private:
