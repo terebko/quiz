@@ -1,6 +1,14 @@
 #include "questions.h"
 #include <windows.h>
 #include <sstream>
+#include <fstream>
+#include <assert.h>
+template<typename T>
+void pop_front(std::vector<T>& vec)
+{
+    assert(!vec.empty());
+    vec.erase(vec.begin());
+}
 Question::Question(){
     std::cout << "Podaj tresc pytania: ";
     std::string theSentence;
@@ -35,11 +43,13 @@ Question::Question(){
 }
 
 void const Question::print(){
+    std::cout << "Pytanko: " << std::endl;
     std::cout << question << std::endl;
 
     for(int i = 1; i <= answers.size(); ++i){
         std::cout << i << ") " << answers[i-1] << std::endl;
     }
+    std::cout << correctAnswer << std::endl;
 }
 
 
@@ -52,16 +62,18 @@ std::vector<Question> Question::loadQuestionsFromFile(std::string fileName){
             std::string question;
             std::vector<std::string> answers;
             int correctAnswer;
-
+      //      std::cout << "Question: " << question << std::endl;
             std::string buffer; // Buffer stores whole question, including
                                 // questions, answers, correctAnswer
             std::getline(source, buffer, ';');
 
             // Reading question from buffer
-            std::cout << buffer;
-            Sleep(2000);
+
+         //   std::cout << buffer;
+          //  Sleep(2000);
             question = buffer.substr(0, buffer.find('\n'));
             buffer.erase(0, buffer.find('\n'));
+
 
             // Reading correctAnswer
             correctAnswer = atoi(buffer.substr(buffer.find_last_of('\n')).c_str());
@@ -69,7 +81,7 @@ std::vector<Question> Question::loadQuestionsFromFile(std::string fileName){
             // Reading answers
             buffer.erase(0,1);
           //  buffer.erase(buffer.find_last_of('\n'));
-            while(buffer != ""){
+            while(buffer != "" && !source.eof()){
                 std::string oneAnswer;
                 if(buffer.find('\n') != std::string::npos){
                     oneAnswer = buffer.substr(0, buffer.find('\n'));
@@ -83,11 +95,18 @@ std::vector<Question> Question::loadQuestionsFromFile(std::string fileName){
             }
             Question oneQuestion(question, answers, correctAnswer);
             questions.push_back(oneQuestion);
+            }
+
         }
+    for(int i = 1; i != questions.size()-1; ++i){
+        questions[i].question = questions[i].answers[0];
+        pop_front(questions[i].answers);
+        questions[i].answers.pop_back();
     }
+    questions[0].answers.pop_back();
+    questions.pop_back();
     return questions;
 }
-
 
 void const Question::saveQuestionsToFile(std::vector<Question> questions, std::string fileName){
     std::fstream destination;
